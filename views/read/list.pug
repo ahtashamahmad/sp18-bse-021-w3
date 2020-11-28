@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+    .row
+        .col-sm-8
+            h1=title
+        .col-sm-4
+            a(href="/read/add", class="btn btn-info my-10 float-right") Add New Book
+    table.table
+        thead
+            tr
+                th(style="text-align:center") Serial Number
+                th(style="text-align:center") Book
+                th(style="text-align:center") Action
+
+        tbody
+            each read in reads
+                tr
+                    td(style="text-align:center")=read.Serial_No
+                    td(style="text-align:center")=read.book
+                    td(style="text-align:center")
+                        a(href="#", class="btn faas btn-danger") Read
+
+                    br
+                   
+                    
+                       

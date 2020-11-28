@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+    h1 Add New Book For Reading
+    form(action="/read/add",method="post")
+        .form-group
+            label(for="Serial_No") Serial Number
+            input#Serial_No(type="text", class="form-control", name="Serial_No")
+        .form-group
+            label(for="book") Book Name
+            input#book(type="text", class="form-control", name="book")
+        
+        input(type="submit", class="btn btn-info" )
+    

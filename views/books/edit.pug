@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+    h1 Edit Product
+    form(action="/books/edit/"+book._id,method="post")
+        .form-group
+                label(for="book") Book Name
+                input#book(type="text", class="form-control", name="book" ,value=book.book)
+        .form-group
+                label(for="author_name") Author Name
+                input#author_name(type="text", class="form-control", name="author_name" , value=book.author_name)
+        .form-group
+                label(for="price") Price
+                input#weight(type="number", class="form-control", name="price", value=book.price)
+        
+                
+        input(type="submit", class="btn btn-info")
+        

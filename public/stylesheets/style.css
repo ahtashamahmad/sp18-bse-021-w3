@@ -1,0 +1,50 @@
+body {
+  padding-top: 10px;
+  background-color: #d0edf5;
+
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #2a3133;
+}
+
+.vertical-menu {
+  width: 200px;
+  height: 500px;
+}
+
+.vertical-menu a {
+  margin-left: -60px;
+  background-color: rgb(167, 137, 137);
+  color: rgb(82, 79, 79);
+  display: block;
+  padding: 30px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: rgb(194, 169, 169);
+}
+
+.vertical-menu a.active {
+  background-color: #af684c;
+  color: white;
+}
+.faas{
+  margin-left:20px;
+}
+.card{
+  padding: 10px;
+  margin: 10px;
+}
+.card_style{
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.butan{
+  margin-top: 20px;
+}
+tbody{
+  padding: 30px;
+}

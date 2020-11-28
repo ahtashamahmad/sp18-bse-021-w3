@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+    h1 Add New Book
+    form(action="/books/add",method="post")
+        .form-group
+            label(for="book") Book Name
+            input#book(type="text", class="form-control", name="book")
+        .form-group
+            label(for="author_name") Author Name
+            input#author_name(type="text", class="form-control", name="author_name")
+        .form-group
+            label(for="price") Price
+            input#weight(type="number", class="form-control", name="price")
+        input(type="submit", class="btn btn-info")
+    

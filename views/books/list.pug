@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+    .row
+        .col-sm-8
+            h1=title
+        .col-sm-4
+            a(href="/books/add", class="btn btn-info my-10 float-right") Add New Book
+    table.table
+        thead
+            tr
+                th(style="text-align:center") Book
+                th(style="text-align:center") Author Name
+                th(style="text-align:center") Price
+                th(style="text-align:center") Actions
+        tbody
+            each book in books
+                tr
+                    td(style="text-align:center")=book.book
+                    td(style="text-align:center")=book.author_name
+                    td(style="text-align:center")=book.price
+                    td(style="text-align:center")
+                        a(href="/books/delete/"+book._id, class="btn faas btn-danger") <i class="fas fa-trash-alt"></i>
+                        a(href="/books/edit/"+book._id, class="btn  faas btn-success    ") <i class="fas fa-edit"></i>
+                        a(href="/books/cart/"+book._id, class="btn faas btn-info") <i class="fas fa-cart-plus"></i>

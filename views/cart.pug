@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1 My shopping Cart
+  - var total=0;
+    table.table
+      thead
+        th(style="text-align:center") Name
+        th(style="text-align:center") Price
+        th(style="text-align:center") Actions
+      tbody
+        each item in cart
+          - total += Number(item.price)
+          
+          tr
+            td(style="text-align:center")=item.book
+            td(style="text-align:center")=item.price
+            td(style="text-align:center")
+              a(href="/books/cart/remove/"+item._id, class="btn btn-danger") Remove Book
+      tfoot
+        tr
+          td(style="text-align:center") Total
+          td(style="text-align:center")=total
+
